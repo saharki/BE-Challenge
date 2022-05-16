@@ -14,35 +14,23 @@ client.on('ready', () => {
 
 const cardsData = fs.readFileSync('./cards.json');
 const cards = JSON.parse(cardsData);
+//const cards = cardsParsedData.reduce((obj, card) => ({ ...obj, [card.id]: card }))
 
-async function getMissingCard(key) {
-    const userCards = await client.zRange(key, 0, -1)
-    let allCards = [...cards]
-
-    userCards.forEach((userCard, idx) => {
-        allCards = allCards.filter(function (value, index, arr) {
-            return JSON.parse(userCard).id !== value.id;
-        })
-    })
-
-    return allCards.pop();
+function getMissingCard(index) {
+    return cards[index - 1]
 }
 
 app.get('/card_add', async (req, res) => {
     const  key = 'user_id:' + req.query.id
     let missingCard = ''
-    while (true){
-        missingCard =await getMissingCard(key);
-        if(missingCard === undefined){
-            res.send({id: "ALL CARDS"})
-            return
-        }
-        result = await client.ZADD(key, {score: 0, value: JSON.stringify(missingCard)}, 'NX')
-        if(result === 0){
-            continue
-        }
-        break
+    const index = await client.INCR(key)
+
+    missingCard = getMissingCard(index);
+    if(missingCard === undefined){
+        res.send({id: "ALL CARDS"})
+        return
     }
+
     res.send(missingCard)
 })
 
