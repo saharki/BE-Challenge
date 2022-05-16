@@ -33,8 +33,8 @@ As long as you maintain the API interface and index.js as an entry point, then e
 + The winner **must** attend the meetup to get the reward. 
 
 # How to submit
-- Upload  your `index.js`, `package.json` and `package-lock.json` files to a new repository in Github.
-- Submit your Github Repository in the google form
+- Upload  your `index.js`, `package.json` and `package-lock.json` files to a new repository in Github - make sure it is publicly accessible.
+- Submit your Github Repository in the [Google form](https://docs.google.com/forms/d/17Iatjk7XA92BntC6EPYFwbMPyKFQ2mJegA9TMvCnH-g)
 - Attend the meetup.
 
 ## Challenge Setup
