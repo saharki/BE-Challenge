@@ -11,10 +11,10 @@ Important: If you’re the lucky winner, then you must be present at the Backend
 
 Included in this repository is an index.js file.
 Inside the file there’s a simple web server that implements a "Card Service".
-For every request, the service provides each user a card, and that card can be served only ***once*** per user.
+For every request, the service provides each user a card out of the cards listed in "cards.json", and that card can be served only once per user.
 
 **The problem**:
-The current implementation is slow and inefficient, and takes more than 10 minutes to complete a full run.
+The problem: The current implementation is slow and inefficient, and it takes the tester program more than 10 minutes to complete a full run of a load testing cycle.
 
 **The challenge**:
 Make the service handle higher throughput and finish quicker.
