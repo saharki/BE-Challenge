@@ -7,30 +7,30 @@ Below you will find all the details and terms related to the challenge. Please s
 Important: If you’re the lucky winner, then you must be present at the Backend Meetup (at our office) on May 25th to receive the prize (MacBook Pro 16 in).
 
 
-# What's the challenge
+# Background Info:
 
 Included in this repository is an index.js file.
 Inside the file there’s a simple web server that implements a "Card Service".
 For every request, the service provides each user a card, and that card can be served only ***once*** per user.
 
-###The problem:
+**The problem**:
 The current implementation is slow and inefficient, and takes more than 10 minutes to complete a full run.
 
-###The challenge:
+**The challenge**:
 Make the service handle higher throughput and finish quicker.
 The winner will be the solution with the lowest overall runtime!
 
-###How:
+**How**:
 As long as you maintain the API interface and index.js as an entry point, then everything goes! :)
 
 # Constraints and terms
 + The solution must be written in NodeJS only.
-+ The solution must adhere the "business" requirements listed above.
-+ Included tester must pass successfully, scoring will be based on it.
-+ For the scoring we will run prebuild testers and record the outcome.
-+ The winner will be the solution with the lowest overall runtime to complete the challenge successfully.
-+ The winner will be announced at the meetup.
-+ The winner **must** attend the meetup to get the reward. 
++ The solution must adhere to the "business" requirements listed above.
++ The included tester must pass successfully as scoring will be based on it.
++ For the scoring, we will run prebuilt testers and record the outcome.
++ The winner will be the one that has the solution with the lowest overall runtime to complete the challenge successfully.
++ The winner will be announced at our Backend Meetup at our office in Tel Aviv on May 25th.
++ The winner must attend the meetup to get the reward.
 
 # How to submit
 - Upload  your `index.js`, `package.json` and `package-lock.json` files to a new repository in Github - make sure it is publicly accessible.
@@ -47,8 +47,8 @@ As long as you maintain the API interface and index.js as an entry point, then e
 - You should receive a payload like this:
 ```json
 {
-    "id": "410bc4fc-23a9-4cd0-81fb-c96453516b47",
-    "name": "16b5b50b-64c9-4edd-8cb3-464be756eaac"
+  "id": "410bc4fc-23a9-4cd0-81fb-c96453516b47",
+  "name": "16b5b50b-64c9-4edd-8cb3-464be756eaac"
 }
 ```
 - Run the tester binaries included according to your platform `./osx-intel` or `./linux`
