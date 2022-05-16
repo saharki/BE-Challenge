@@ -17,7 +17,8 @@ For every request, the service provides each user a card, and that card can be s
 The current implementation is slow and inefficient, and takes more than 10 minutes to complete a full run.
 
 ###The challenge:
-Make the service handle higher throughput and finish quicker!
+Make the service handle higher throughput and finish quicker.
+The winner will be the solution with the lowest overall runtime!
 
 ###How:
 As long as you maintain the API interface and index.js as an entry point, then everything goes! :)
